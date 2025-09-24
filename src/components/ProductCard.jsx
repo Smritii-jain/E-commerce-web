@@ -1,6 +1,6 @@
 import React from "react";
 import Rating from "./Rating";
-import Badge from "./Badge"; // Import the Badge component
+import Badge from "./Badge"; 
 
 export default function ProductCard({ product }) {
   const {
@@ -16,7 +16,6 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="bg-white border-2 border-gray-100 rounded-lg flex flex-col w-[250px]">
-      {/* Image container with the badge */}
       <div className="relative w-full h-[200px] bg-gray-100 flex justify-center items-center">
         <img
           src={imageUrl}
@@ -31,17 +30,13 @@ export default function ProductCard({ product }) {
         )}
       </div>
 
-      {/* Product details */}
       <div className="flex flex-col items-center p-4">
-        {/* Product name */}
         <h3 className="text-blue-900 font-bold text-md text-center">{name}</h3>
         
-        {/* Rating component */}
         <div className="mt-0">
           <Rating value={ratingValue} count={ratingCount} />
         </div>
         
-        {/* Price and discount */}
         <div className="flex justify-center items-baseline mt-1 text-sm text-gray-600">
           <span className="font-bold text-sky-500 mr-2">
             ${discountPrice}
